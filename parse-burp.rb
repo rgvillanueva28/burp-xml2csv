@@ -50,7 +50,7 @@ optparse = OptionParser.new do|opts|
     opts.banner = "Parse Burp Suite XML output into CSV results.\r\nUsage: #{$0} [options]"
 
     opts.on('-i', '--infile FILE', 'Input XML file') do |file|
-      raise 'No such file' unless File.exists?(file)
+      raise 'No such file' unless File.exist?(file)
       options[:infile] = file
     end
 
